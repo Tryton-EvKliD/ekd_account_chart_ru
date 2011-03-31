@@ -1,1 +1,40 @@
-/home/trytond-1.8.2/trytond/modules/ekd_acc_chart_ru/xml/account_tax_ru.xml
+<?xml version="1.0" encoding="utf-8"?>
+<tryton>
+    <data>
+
+        <record model="account.tax.code.template"
+            id="tax_code_ru">
+            <field name="name">Налоговый кодекс РФ</field>
+            <field name="account" ref="ru000"/>
+        </record>
+
+        <record model="account.tax.code.template"
+            id="tax_code_ru_6pers">
+	    <field name="name">Упрощенная система налогообложения 6%</field>
+            <field name="parent" ref="tax_code_ru"/>
+            <field name="account" ref="ru000"/>
+        </record>
+
+        <record model="account.tax.code.template"
+            id="tax_code_ru_15pers">
+	    <field name="name">Упрощенная система налогообложения 15%</field>
+            <field name="parent" ref="tax_code_ru"/>
+            <field name="account" ref="ru000"/>
+        </record>
+
+        <record model="account.tax.code.template"
+            id="tax_code_ru_vmn">
+	    <field name="name">Упрощенная система налогообложения (Вмененный налог)</field>
+            <field name="parent" ref="tax_code_ru"/>
+            <field name="account" ref="ru000"/>
+        </record>
+
+        <record model="account.tax.code.template"
+            id="tax_code_ru_full">
+	    <field name="name">Стандартное система налогообложения</field>
+            <field name="parent" ref="tax_code_ru"/>
+            <field name="account" ref="ru000"/>
+        </record>
+
+    </data>
+</tryton>

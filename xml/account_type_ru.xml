@@ -1,1 +1,195 @@
-/home/trytond-1.8.2/trytond/modules/ekd_acc_chart_ru/xml/account_type_ru.xml
+<?xml version="1.0" encoding="utf-8"?>
+<tryton>
+    <data noupdate="0">
+
+            <record model="ekd.account.type.template" id="type_ru" >
+	      <field name="name">Типы счетов для России</field>
+              <field name="type_balance">active</field>
+	      <field name="sequence">105</field>
+	    </record>
+
+            <record model="ekd.account.type.template" id="type_fixed_asset" >
+	      <field name="name">Основные средства</field>
+	      <field name="code">fixed_asset</field>
+	      <field name="sequence">105</field>
+              <field name="parent" ref="type_ru"/>
+              <field name="type_balance">active</field>
+            </record>
+
+	    <record model="ekd.account.type.template" id="type_intangibles_asset" >
+	      <field name="name">Нематериальные активы</field>
+	      <field name="code">intangibles</field>
+	      <field name="sequence">110</field>
+	      <field name="parent" ref="type_ru"/>
+              <field name="type_balance">active</field>
+	    </record>
+
+    	    <record model="ekd.account.type.template" id="type_material_asset" >
+	      <field name="name">Материалы</field>
+	      <field name="code">material</field>
+	      <field name="parent" ref="type_ru"/>
+	      <field name="sequence">115</field>
+              <field name="type_balance">active</field>
+	    </record>
+
+            <record model="ekd.account.type.template" id="type_wares_asset" >
+	      <field name="name">Товары на продажу</field>
+	      <field name="code">wares</field>
+	      <field name="parent" ref="type_ru"/>
+	      <field name="sequence">120</field>
+              <field name="type_balance">active</field>
+	    </record>
+
+            <record model="ekd.account.type.template" id="type_product_asset" >
+	      <field name="name">Товары в производстве</field>
+	      <field name="code">product</field>
+	      <field name="parent" ref="type_ru"/>
+	      <field name="sequence">120</field>
+              <field name="type_balance">active</field>
+	    </record>
+
+	    <record model="ekd.account.type.template" id="type_service_asset" >
+	      <field name="name">Услуги</field>
+	      <field name="code">service</field>
+	      <field name="parent" ref="type_ru"/>
+	      <field name="sequence">125</field>
+              <field name="type_balance">active</field>
+	    </record>
+
+	    <record model="ekd.account.type.template" id="type_tax">
+	      <field name="name">Налоги </field>
+	      <field name="code">tax</field>
+	      <field name="parent" ref="type_ru"/>
+	      <field name="sequence">130</field>
+              <field name="type_balance">active</field>
+	    </record>
+
+	    <record model="ekd.account.type.template" id="type_income">
+	      <field name="name">Доход </field>
+	      <field name="code">revenue</field>
+	      <field name="parent" ref="type_ru"/>
+	      <field name="sequence">135</field>
+              <field name="type_balance">passive</field>
+	    </record>
+
+	    <record model="ekd.account.type.template" id="type_expense">
+	      <field name="name">Расход </field>
+	      <field name="code">expense</field>
+	      <field name="parent" ref="type_ru"/>
+	      <field name="sequence">140</field>
+              <field name="type_balance">active</field>
+	    </record>
+
+	    <record model="ekd.account.type.template" id="type_bill_receivable">
+	      <field name="name">Счет выставленные (платеж) </field>
+	      <field name="code">receivable</field>
+	      <field name="parent" ref="type_ru"/>
+	      <field name="sequence">142</field>
+              <field name="type_balance">active</field>
+	    </record>
+
+	    <record model="ekd.account.type.template" id="type_bill_payable">
+	      <field name="name">Счета полученные (к оплате) </field>
+	      <field name="code">payable</field>
+	      <field name="parent" ref="type_ru"/>
+	      <field name="sequence">144</field>
+              <field name="type_balance">active</field>
+	    </record>
+
+	    <record model="ekd.account.type.template" id="type_cash">
+	      <field name="name">Денежные средства наличные </field>
+	      <field name="code">cash</field>
+	      <field name="parent" ref="type_ru"/>
+              <field name="type_balance">active</field>
+	      <field name="sequence">145</field>
+	    </record>
+
+	    <record model="ekd.account.type.template" id="type_non_cash">
+	      <field name="name">Денежные средства безналичные</field>
+	      <field name="code">non_cash</field>
+	      <field name="parent" ref="type_ru"/>
+              <field name="type_balance">active</field>
+	      <field name="sequence">150</field>
+	    </record>
+
+    	    <record model="ekd.account.type.template" id="type_receivable" >
+	      <field name="name">Дебиторская задолженность (Заказчики и Покупатели)</field>
+	      <field name="code">customer</field>
+	      <field name="parent" ref="type_ru"/>
+	      <field name="sequence">155</field>
+              <field name="type_balance">both</field>
+	    </record>
+
+	    <record model="ekd.account.type.template" id="type_payable" >
+	      <field name="name">Кредиторская задолжность (Поставщики и подрядчики)</field>
+	      <field name="code">supplier</field>
+	      <field name="parent" ref="type_ru"/>
+              <field name="type_balance">both</field>
+	      <field name="sequence">160</field>
+	    </record>
+
+    	    <record model="ekd.account.type.template" id="type_receiv_payable" >
+	      <field name="name">Дебиторская и Кредиторская задолженность</field>
+	      <field name="code">other_partner</field>
+	      <field name="parent" ref="type_ru"/>
+              <field name="type_balance">both</field>
+	      <field name="sequence">165</field>
+	    </record>
+
+    	    <record model="ekd.account.type.template" id="type_person" >
+	      <field name="name">Подотчетные лица</field>
+	      <field name="code">person</field>
+	      <field name="parent" ref="type_ru"/>
+              <field name="type_balance">both</field>
+	      <field name="sequence">165</field>
+	    </record>
+
+	    <record model="ekd.account.type.template" id="type_asset">
+	      <field name="name">Активы</field>
+	      <field name="code">active</field>
+	      <field name="parent" ref="type_ru"/>
+              <field name="type_balance">active</field>
+	      <field name="sequence">170</field>
+	    </record>
+
+	    <record model="ekd.account.type.template" id="type_equity">
+	      <field name="name">Cобственный капитал</field>
+	      <field name="code">equity</field>
+	      <field name="parent" ref="type_ru"/>
+              <field name="type_balance">passive</field>
+	      <field name="sequence">175</field>
+	    </record>
+
+	    <record model="ekd.account.type.template" id="type_liability">
+	      <field name="name">Обязательства (Долги)</field>
+	      <field name="code">liability</field>
+	      <field name="parent" ref="type_ru"/>
+	      <field name="sequence">180</field>
+              <field name="type_balance">passive</field>
+	    </record>
+
+	    <record model="ekd.account.type.template" id="type_salary">
+	      <field name="name">Зарплата</field>
+	      <field name="code">salary</field>
+	      <field name="parent" ref="type_ru"/>
+	      <field name="sequence">190</field>
+              <field name="type_balance">passive</field>
+	    </record>
+
+	    <record model="ekd.account.type.template" id="type_gains_losses" >
+	      <field name="name">Прибыли и Убытки</field>
+	      <field name="code">gains_losses</field>
+	      <field name="parent" ref="type_ru"/>
+	      <field name="sequence">200</field>
+              <field name="type_balance">both</field>
+	    </record>
+
+	    <record model="ekd.account.type.template" id="type_off_balance">
+	      <field name="name">Забалансовые счета</field>
+	      <field name="code">off_balance</field>
+	      <field name="parent" ref="type_ru"/>
+              <field name="type_balance">active</field>
+	      <field name="sequence">185</field>
+	    </record>
+    </data>
+</tryton>
